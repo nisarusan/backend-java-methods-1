@@ -6,17 +6,27 @@ public class B_Dialoog {
         // De methode heeft als parameter de tekst die gesproken moet worden.
         // De volgende zin wordt steeds door de ander gesproken.
         // Vervang System.out.println() steeds door je eigen method.
-        System.out.println("Hey"); //Bert
-        System.out.println("Hey"); //Ernie
-        System.out.println("Welcome to this wonderful conversation");
-        System.out.println("Thnx, I'm looking forward to it");
-        System.out.println("How about this weather?");
-        System.out.println("I really don't mind the cold....");
-        System.out.println("And did you see that random program on that random channel?");
-        System.out.println("Well... I did watch a random program on a random channel...");
-        System.out.println("Thank you for a wonderful conversation!");
-        System.out.println("Cya");
+
+        String[] name = { "Bert", "Ernie" };
+        bertSay(name[0], "Hey!");
+        ernieSay(name[1], "Hey");
+
+        ernieSay(name[1], "Welcome to this wonderful conversation");
+        bertSay(name[0], "Thnx, I'm looking forward to it");
+       ernieSay(name[1],"How about this weather?");
+        bertSay(name[0],"I really don't mind the cold....");
+        ernieSay(name[1],"And did you see that random program on that random channel?");
+        bertSay(name[0], "Well... I did watch a random program on a random channel...");
+        ernieSay(name[1],"Thank you for a wonderful conversation!");
+        bertSay(name[0], "Cya");
     }
+   static void bertSay(String name, String say) {
+       System.out.println(name + " : " + say); //Bert
+   }
+
+   static void ernieSay(String name, String say) {
+       System.out.println(name + " : " + say); //Ernie
+   }
 
     // nieuwe methods komen hier
 }
